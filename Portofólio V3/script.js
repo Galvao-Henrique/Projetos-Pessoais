@@ -21,7 +21,7 @@ tsParticles.load("tsparticles", {
         value: 1
       },
       size: {
-        value: 0.2
+        value: 0.3
       },
       move: {
         enable: true,
