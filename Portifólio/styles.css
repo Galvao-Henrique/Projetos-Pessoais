@@ -1,32 +1,48 @@
-:root{
-    --text-color: #1a1c20;
-    --link-color: #4a76ee;
-    --background-color: #eeeff1;
-}
-
-*{
+/* ===================== RESET ===================== */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: white; 
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: trasparent; 
 }
 
 body {
-    font-family: 'Poppins' , sans-serif;
-    background-color: var(--background-color);
+    font-family: "Fira Code", monospace;
+    background-color: black;
     max-width: 1400px;
     margin: 0 auto;
 }
 
 a {
-    color: var(--link-color);
+    color: #eeeff1;
     text-decoration: none;
 }
 
-/*NAVBAR*/
+/* ===================== PARTICLES ===================== */
+#tsparticles {
+    position: fixed;
+    width: 100dvh;
+    height: 100dvh;
+    z-index: -1;
+}
+
+/* ===================== NAVBAR ===================== */
 nav {
     display: flex;
     justify-content: space-between;
@@ -35,197 +51,226 @@ nav {
     height: 80px;
 }
 
-nav .left a{
-    color: var(--text-color);
-    font-size: 22px;
-    font-weight: 600;
+nav .left a {
+    color: #eeeff1;
+    font-size: 26px;
+    font-weight: 300;
 }
 
-nav .right a{
-    color: var(--text-color);
-    margin: 0 10px;
+nav .right a {
+    color: #eeeff1;
+    margin: 0 8px;
+    font-size: 16px;
+    padding: 5px 15px;
+    box-shadow: 3px 3px 10px #00ffff4f;
+    border: 1px solid #00ffff4f;
+    border-radius: 5px;
+}
+nav .right a:hover {
+    box-shadow: 3px 3px 10px hsla(278, 100%, 50%, 0.473);
+    border: 1px solid hsla(278, 100%, 50%, 0.473);
 }
 
 nav .right a:last-child {
-    color: var(--background-color);
-    background-color: var(--text-color);
-    padding: 5px 15px;
-    border-radius: 5px;
+    background-color: rgba(0, 101, 104, 0.486);
+    color: #eeeff1;
+}
+nav .right a:last-child:hover {
+    background-color: rgba(81, 0, 156, 0.5);
 }
 
-nav .right a span{
+nav .right a span {
     margin-left: 5px;
 }
-/*FIM NAVBAR*/
 
-/*SEC 1*/
+/* ===================== HERO SECTION ===================== */
 .hero-section {
+    color: #eeeff1;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 50px;
-    margin: 20px 0;
+    margin: 20px 0 100px;
     gap: 40px;
-    margin-bottom: 100px;
 }
 
-.hero-section .text h2{
-    font-size: 45px;
+.hero-section .text {
+    flex: 5;
+    font-size: 15px;
+    font-weight: 100;
 }
 
-.hero-section .text .links{
+.hero-section .text h2 {
+    font-size: 40px;
+    font-weight: 300;
+}
+
+.hero-section .text .links {
     margin-top: 25px;
 }
 
-.hero-section .text .links a{
+.hero-section .text .links a {
     display: inline-block;
     padding: 5px 10px;
-    border: 2px solid var(--link-color);
+    border: 2px solid #00ffff4f;
+    box-shadow: 3px 3px 10px #00ffff4f;
     border-radius: 5px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    transition: .1s;
+    margin: 0 10px 10px 0;
 }
 
-.hero-section .text .links a:hover{
-    color: var(--text-color);
-    border: 2px solid var(--text-color);
+.hero-section .text .links a:hover {
+  box-shadow: 3px 3px 10px hsla(278, 100%, 50%, 0.473);
+  border: 1px solid hsla(278, 100%, 50%, 0.473);
 }
 
-.hero-section .text{
-    flex: 5;
-}
-
-.hero-section .headshot{
+.hero-section .headshot {
     flex: 2;
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
 }
 
-.hero-section .headshot img{
+.hero-section .headshot img {
     border-radius: 50%;
     width: 350px;
 }
-/*FIM SEC 1*/
 
-/*SEC 2*/
-.skills-section{
+#typewriter {
+  color: #eeeff1;
+  font-size: 30px;
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: "Fira Code", monospace;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.5;
+}
+
+/* ===================== SKILLS SECTION ===================== */
+.skills-section {
     padding: 0 50px;
     margin-bottom: 100px;
 }
 
-.skills-section h2{
+.skills-section h2 {
+    font-size: 40px;
+    font-weight: 300;
     text-align: center;
-    font-size: 35px;
+    color: #eeeff1;
+
 }
 
-.skills-section .text{
+.skills-section .text {
     text-align: center;
     margin-bottom: 20px;
+    color: #eeeff1;
 }
 
-.skills-section .cells{
+.skills-section .cells {
+    color: #eeeff1;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-.skills-section .cells .cell{
+.skills-section .cell {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
-
     width: 200px;
     padding: 10px 20px;
-    border: 1px solid #d3d3d3;
+    border: 2px solid #00ffff4f;
+    box-shadow: 3px 3px 10px #00ffff4f;
     border-radius: 5px;
     margin: 10px;
 }
 
-.skills-section .cells .cell .img{
+.skills-section .cell:hover {
+     box-shadow: 3px 3px 10px hsla(278, 100%, 50%, 0.473);
+     border: 1px solid hsla(278, 100%, 50%, 0.473);
+}
+
+.skills-section .cell .img {
     width: 30px;
     height: 30px;
     object-fit: contain;
     border-radius: 2px;
 }
 
-.skills-section .cells .cell span{
+.skills-section .cell span {
     font-size: 18px;
 }
-/*FIM SEC 2*/
 
-/*SEC 3*/
+/* ===================== TESTIMONY SECTION ===================== */
 .testimony-section {
     padding: 0 50px;
     margin-bottom: 100px;
 }
 
-.testimony-section h2{
+.testimony-section h2 {
     font-size: 35px;
     margin-bottom: 30px;
 }
 
-.testimony-section .group{
+.testimony-section .group {
     display: flex;
     align-items: center;
     gap: 50px;
 }
 
-.testimony-section .group .person-details{
+.testimony-section .person-details {
     text-align: center;
     flex: 2;
 }
 
-.testimony-section .group .text{
-    flex: 8;
-}
-
-.testimony-section .group .person-details img{
+.testimony-section .person-details img {
     max-width: 200px;
     object-fit: cover;
     border-radius: 5px;
     margin-bottom: 10px;
 }
 
-.testimony-section .group .person-details p{
+.testimony-section .person-details p {
     font-weight: 600;
 }
 
-.testimony-section .group .person-details p:last-child{
+.testimony-section .person-details p:last-child {
     font-weight: normal;
 }
-/*FIM SEC 3*/
 
-/*SEC 4*/
+.testimony-section .text {
+    flex: 8;
+}
+
+/* ===================== CONTACT SECTION ===================== */
 .contact-section {
     padding: 0 50px;
     margin-bottom: 100px;
 }
 
-.contact-section h2{
+.contact-section h2 {
     font-size: 35px;
 }
 
-.contact-section .group{
+.contact-section .group {
     display: flex;
     gap: 50px;
 }
 
-.contact-section .group .text{
+.contact-section .text {
     flex: 3;
     margin-top: 20px;
 }
 
-.contact-section .group form{
+.contact-section form {
     flex: 3;
     display: flex;
     flex-direction: column;
 }
 
-.contact-section .group form input,
-.contact-section .group form textarea{
-    font-family: 'Poppins' , sans-serif;
+.contact-section input,
+.contact-section textarea {
+    font-family: 'Poppins', sans-serif;
     border: 2px solid var(--link-color);
     background-color: transparent;
     padding: 10px;
@@ -234,9 +279,9 @@ nav .right a span{
     resize: none;
 }
 
-.contact-section .group form button{
+.contact-section button {
     font-size: 16px;
-    font-family: 'Poppins' , sans-serif;
+    font-family: 'Poppins', sans-serif;
     color: #fff;
     background-color: var(--link-color);
     border: none;
@@ -245,49 +290,41 @@ nav .right a span{
     transition: .1s;
 }
 
-.contact-section .group form button:hover{
+.contact-section button:hover {
     filter: brightness(.9);
 }
-/*FIM SEC 4*/
 
-@media (max-width: 850px){
-    /*SEC 1*/
-    .hero-section .text h2{
+/* ===================== RESPONSIVO ===================== */
+@media (max-width: 850px) {
+    .hero-section .text h2 {
         font-size: 35px;
     }
 }
 
-@media (max-width: 740px){
-    /*SEC 1*/
+@media (max-width: 740px) {
     .hero-section {
         flex-direction: column-reverse;
     }
 
-    .hero-section .headshot img{
+    .hero-section .headshot img {
         width: 300px;
     }
-    /*FIM SEC 1*/
 
-    /*SEC 3*/
-    .testimony-section h2{
+    .testimony-section h2 {
         text-align: center;
     }
 
-    .testimony-section .group{
+    .testimony-section .group {
         flex-direction: column;
     }
-    /*FIM SEC 3*/
 
-    /*SEC4*/
-    .contact-section .group{
+    .contact-section .group {
         flex-direction: column;
     }
-    /*FIM SEC4*/
 }
 
 @media (max-width: 600px) {
-    /*NAVBAR*/
-    nav{
+    nav {
         padding: 0 20px;
     }
 
@@ -304,37 +341,19 @@ nav .right a span{
     nav .right a span {
         display: none;
     }
-    /*FIM NAVBAR*/
 
-    /*SEC1*/
-    .hero-section{
+    .hero-section,
+    .skills-section,
+    .testimony-section,
+    .contact-section {
         padding: 0 20px;
     }
 
-    .hero-section .text h2{
+    .hero-section .text h2 {
         font-size: 30px;
     }
-    /*FIM SEC1*/
 
-    /*SEC 2*/
-    .skills-section{
-        padding: 0 20px;
-    }
-
-    .skills-section .cells .cell span{
+    .skills-section .cell span {
         font-size: 16px;
     }
-    /*FIM SEC 2*/
-
-    /*SEC 3*/
-    .testimony-section{
-        padding: 0 20px;
-    }
-    /*FIM SEC 3*/
-
-    /*SEC 4*/
-    .contact-section{
-        padding: 0 20px;
-    }
-    /*FIM SEC 4*/
 }
