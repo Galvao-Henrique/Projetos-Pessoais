@@ -11,23 +11,6 @@ document.getElementById('contact-form').addEventListener('submit', function(even
 });
 /*FIM EMAIL*/
 
-document.addEventListener("DOMContentLoaded", function() {
-  // Efeito de digitação 
-  const texto = "</Desenvolvedor de Software/>";
-  const elemento = document.getElementById("typewriter");
-  let i = 0;
-
-  function digitar() {
-    if (i < texto.length) {
-      elemento.innerHTML += texto.charAt(i);
-      i++;
-      setTimeout(digitar, 65); // tempo entre letras (em ms)
-    }
-  }
-
-  digitar();
-});
-
 //Partículas 
 tsParticles.load("tsparticles", {
     background: {
@@ -51,7 +34,7 @@ tsParticles.load("tsparticles", {
         value: 1
       },
       size: {
-        value: 0.3
+        value: 0.4
       },
       move: {
         enable: true,
