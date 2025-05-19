@@ -59,21 +59,15 @@ nav .left a {
 
 nav .right a {
     color: #eeeff1;
-    margin: 0 6px;
-    font-size: 16px;
-    padding: 5px 15px;
-    box-shadow: 3px 3px 10px #00ffff4f;
-    border: 1px solid #00ffff4f;
-    border-radius: 5px;
+    margin: 0 10px;
 }
-nav .right a:hover {
-    box-shadow: 3px 3px 10px hsla(278, 100%, 50%, 0.473);
-    border: 1px solid hsla(278, 100%, 50%, 0.473);
-}
+
 
 nav .right a:last-child {
     background-color: rgba(0, 101, 104, 0.486);
     color: #eeeff1;
+    padding: 5px 15px;
+    border-radius: 5px;
 }
 nav .right a:last-child:hover {
     background-color: rgba(81, 0, 156, 0.5);
@@ -296,6 +290,7 @@ nav .right a span {
     font-size: 40px;
     font-weight: 300;
     color: #eeeff1;
+    text-align: center;
 }
 
 .testimony-section .group {
@@ -333,6 +328,10 @@ nav .right a span {
 
 .testimony-section .text .blue-skill {
     color:  #00ffffc0;
+} 
+
+.testimony-section .text .blue-skill a {
+    color: hsl(288, 100%, 50%);
 } 
 
 .testimony-section .text .blue-skill:hover {
